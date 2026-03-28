@@ -35,7 +35,6 @@ h1 {
     color: rgb(210, 65, 65);
     text-shadow: 0 0 5px red;
     font-size: 3rem; 
-    text-transform: uppercase;
 }
 
 h3 {
@@ -170,8 +169,9 @@ a {
 
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px) scale(1.03);
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 0, 0, 0.5); 
     color: rgba(255, 255, 255, 0.9); 
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
 }
