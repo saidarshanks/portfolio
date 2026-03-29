@@ -36,15 +36,16 @@
         <p>I’m SaidarshanKS from India. I enjoy learning new technologies and building things step by step. I have long-term goals for my future and I’m focused on improving my skills every day. Currently, I’m a school student doing computer science aiming to pursue higher education abroad.</p>
     </section>
 
-    <section id="skills">
-        <h3>My Skills</h3>
-        <p>I’m currently a beginner and continuously learning. Here are some of the skills I have so far:</p>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Basic Python</li>
-        </ul>
-    </section>
+ <section id="skills">
+    <h3>My Skills</h3>
+    <p>I’m currently a beginner and continuously learning. Here are my skills:</p>
+    <div class="skill-card">HTML</div>
+    <div class="skill-card">CSS</div>
+    <div class="skill-card">Python</div>
+    <div class="skill-card">Git & GitHub</div>
+    <div class="skill-card">Responsive Design</div>
+    <div class="skill-card">Problem Solving</div>
+ </section>
 
     <section id="projects">
       <h3>Projects</h3>
@@ -56,24 +57,67 @@
      </div>
     </section>
 
-    <section id="contact">
+
+<section id="contact">
     <h3>Contact</h3>
-    <p>You can reach me via email at:</p>
-    <ul>
-        <li><a href="mailto:saidarshanks.dev@gmail.com">saidarshanks.dev@gmail.com</a></li>
-        </ul>
-    <p>You can visit my Github at:</p>
-    <ul>
-        <li><a href="https://github.com/saidarshanks" target="_blank">GitHub: github.com/saidarshanks</a></li>
-        </ul>
-    <p>I will be adding more contact options soon.</p>
-   </section>
+
+    <div class="contact-container">
+
+        <a href="mailto:saidarshanks.dev@gmail.com" class="contact-card">
+            📧 Email
+        </a>
+
+        <a href="https://github.com/saidarshanks" target="_blank" class="contact-card">
+            💻 GitHub
+        </a>
+
+        <a href="https://www.linkedin.com/in/saidarshan-ks-1161453bb/" target="_blank" class="contact-card">
+            🔗 LinkedIn
+        </a>
+
+    </div>
+
+    <p class="contact-text">
+    I’m always open to learning opportunities, collaborations, and connecting with like-minded people. 
+    Feel free to reach out through any of the platforms above.
+    </p>
+</section>
+
 
 <footer>
     <h2>Thank you for visiting my portfolio</h2>
 </footer>
 
     </main>
+
+<script>
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".navbar a");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+
+        if (
+            pageYOffset >= sectionTop &&
+            pageYOffset < sectionTop + sectionHeight
+        ) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+    });
+});
+</script>
+
 
     
 </body>

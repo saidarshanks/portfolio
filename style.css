@@ -79,13 +79,7 @@ p {
 }
 
 .navbar a:hover{
-    background-color:rgb(239, 70, 70) ;
-    transform: scale(1.1);
-    border-radius: 5px;
-}
-
-section:hover {
-    transform: none;
+    background-color:rgb(255,0,0,0.2) ;
 }
 
 
@@ -111,8 +105,13 @@ a {
     cursor: pointer;
 }
 
+
+#contact {
+    min-height: 60vh; 
+}
+
 #contact a {
-    color: blue;
+    color: cyan;
     text-decoration: none;
 }
 
@@ -167,11 +166,104 @@ a {
     transition: transform 0.3s ease, background 0.3s ease, border 0.3s ease;
 }
 
-
 .project-card:hover {
     transform: translateY(-8px) scale(1.03);
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 0, 0, 0.5); 
-    color: rgba(255, 255, 255, 0.9); 
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); 
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.skill-card {
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+.skill-card h4 {
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgb(210, 65, 65);
+}
+
+.skill-card p {
+    display: none; 
+}
+
+
+.skill-card:hover {
+    background: rgba(255, 0, 0, 0.15);
+    transform: scale(1.1);
+    border: 1px solid red;
+
+}
+
+.navbar a.active {
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.contact-card {
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    transition: 0.3s;
+}
+
+#contact {
+    min-height: 60vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.contact-text {
+    margin-top: 30px;
+}
+
+
+.contact-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+}
+
+.contact-text {
+    text-align: center;
+    max-width: 600px;
+    margin: 25px auto 0;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
 }
