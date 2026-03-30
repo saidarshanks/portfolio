@@ -92,23 +92,11 @@ footer {
     text-transform: uppercase;
 }
 
-#skills ul {
-    max-width: 300px;
-    margin: auto;
-}
-
-#skills li {
-    margin: 8px 0;
-}
 
 a {
     cursor: pointer;
 }
 
-
-#contact {
-    min-height: 60vh; 
-}
 
 #contact a {
     color: cyan;
@@ -174,44 +162,43 @@ a {
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); 
 }
 
-.skills-container {
+.skills-category {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.skills-category h4 {
+    margin-bottom: 10px;
+    color: rgba(255,255,255,0.8);
+}
+
+.skill-badges {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 15px;
+    gap: 10px;
 }
 
-.skill-card {
-    padding: 10px 16px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    text-align: center;
-
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-
+.badge {
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
     transition: 0.3s;
-    cursor: pointer;
 }
 
 
-.skill-card h4 {
-    margin: 0;
-    font-size: 0.9rem;
-    color: rgb(210, 65, 65);
-}
-
-.skill-card p {
-    display: none; 
-}
+.badge.html { background: #e34c26; }
+.badge.css { background: #264de4; }
+.badge.python { background: #3776ab; }
+.badge.git { background: #f1502f; }
+.badge.github { background: #0263a3; }
+.badge.responsive { background: #6c63ff; }
 
 
-.skill-card:hover {
-    background: rgba(255, 0, 0, 0.15);
+.badge:hover {
     transform: scale(1.1);
-    border: 1px solid red;
-
 }
 
 .navbar a.active {
@@ -243,7 +230,6 @@ a {
 
 #contact {
     min-height: 60vh;
-
     display: flex;
     flex-direction: column;
     justify-content: center; 
